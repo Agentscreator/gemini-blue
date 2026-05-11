@@ -28,6 +28,13 @@ __all__ = [
 ]
 
 try:
+    from framework.llm.gemini import GeminiProvider  # noqa: F401
+
+    __all__.append("GeminiProvider")
+except ImportError:
+    pass
+
+try:
     from framework.llm.anthropic import AnthropicProvider  # noqa: F401
 
     __all__.append("AnthropicProvider")

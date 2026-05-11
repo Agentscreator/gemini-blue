@@ -1,5 +1,8 @@
 """
-Aden Hive Framework: A goal-driven agent runtime optimized for Builder observability.
+Gemini Agent Framework: A goal-driven agent runtime for real-world challenges.
+
+Built for the Google Cloud Rapid Agent Hackathon 2026.
+Powered by Gemini 3 and partner MCP servers (GitLab, Elastic, MongoDB, Fivetran, Arize).
 
 The runtime is designed around DECISIONS, not just actions. Every significant
 choice the agent makes is captured with:
@@ -9,7 +12,7 @@ choice the agent makes is captured with:
 - What happened as a result
 - Whether that was good or bad (evaluated post-hoc)
 
-This gives the Builder LLM the information it needs to improve agent behavior.
+This gives the orchestrator the information it needs to improve agent behavior.
 
 ## Testing Framework
 
@@ -22,7 +25,7 @@ The framework includes a Goal-Based Testing system (Goal → Agent → Eval):
 See `framework.testing` for details.
 """
 
-from framework.llm import AnthropicProvider, LLMProvider
+from framework.llm import GeminiProvider, LLMProvider
 from framework.runner import AgentOrchestrator, AgentRunner
 from framework.runtime.core import Runtime
 from framework.schemas.decision import Decision, DecisionEvaluation, Option, Outcome
@@ -52,7 +55,7 @@ __all__ = [
     "Runtime",
     # LLM
     "LLMProvider",
-    "AnthropicProvider",
+    "GeminiProvider",
     # Runner
     "AgentRunner",
     "AgentOrchestrator",

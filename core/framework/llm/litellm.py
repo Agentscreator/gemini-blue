@@ -443,9 +443,9 @@ class LiteLLMProvider(LLMProvider):
     LiteLLM-based LLM provider for multi-provider support.
 
     Supports any model that LiteLLM supports, including:
+    - Google Gemini: gemini-2.0-flash-exp, gemini-1.5-pro, gemini-1.5-flash (DEFAULT)
     - OpenAI: gpt-4o, gpt-4o-mini, gpt-4-turbo, gpt-3.5-turbo
     - Anthropic: claude-3-opus, claude-3-sonnet, claude-3-haiku
-    - Google: gemini-pro, gemini-1.5-pro, gemini-1.5-flash
     - DeepSeek: deepseek-chat, deepseek-coder, deepseek-reasoner
     - Mistral: mistral-large, mistral-medium, mistral-small
     - Groq: llama3-70b, mixtral-8x7b
@@ -453,14 +453,15 @@ class LiteLLMProvider(LLMProvider):
     - And many more...
 
     Usage:
+        # Google Gemini (default)
+        provider = LiteLLMProvider()  # Uses gemini-2.0-flash-exp
+        provider = LiteLLMProvider(model="gemini/gemini-1.5-pro")
+
         # OpenAI
         provider = LiteLLMProvider(model="gpt-4o-mini")
 
         # Anthropic
         provider = LiteLLMProvider(model="claude-3-haiku-20240307")
-
-        # Google Gemini
-        provider = LiteLLMProvider(model="gemini/gemini-1.5-flash")
 
         # DeepSeek
         provider = LiteLLMProvider(model="deepseek/deepseek-chat")
@@ -470,14 +471,14 @@ class LiteLLMProvider(LLMProvider):
 
         # With custom API base
         provider = LiteLLMProvider(
-            model="gpt-4o-mini",
+            model="gemini/gemini-1.5-pro",
             api_base="https://my-proxy.com/v1"
         )
     """
 
     def __init__(
         self,
-        model: str = "gpt-4o-mini",
+        model: str = "gemini/gemini-2.0-flash-exp",
         api_key: str | None = None,
         api_base: str | None = None,
         **kwargs: Any,
@@ -486,11 +487,13 @@ class LiteLLMProvider(LLMProvider):
         Initialize the LiteLLM provider.
 
         Args:
-            model: Model identifier (e.g., "gpt-4o-mini", "claude-3-haiku-20240307")
+            model: Model identifier (default: "gemini/gemini-2.0-flash-exp")
+                   Supports: Gemini, OpenAI, Anthropic, and 100+ other providers
+                   Examples: "gemini/gemini-1.5-pro", "gpt-4o", "claude-3-haiku-20240307"
                    LiteLLM auto-detects the provider from the model name.
             api_key: API key for the provider. If not provided, LiteLLM will
-                     look for the appropriate env var (OPENAI_API_KEY,
-                     ANTHROPIC_API_KEY, etc.)
+                     look for the appropriate env var (GOOGLE_API_KEY,
+                     OPENAI_API_KEY, ANTHROPIC_API_KEY, etc.)
             api_base: Custom API base URL (for proxies or local deployments)
             **kwargs: Additional arguments passed to litellm.completion()
         """

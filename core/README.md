@@ -1,15 +1,19 @@
 # Framework
 
-A goal-driven agent runtime with Builder-friendly observability.
+A goal-driven agent runtime powered by Gemini 3 for real-world challenges.
+
+**Google Cloud Rapid Agent Hackathon 2026 Submission**
 
 ## Overview
 
-Framework provides a runtime framework that captures **decisions**, not just actions. This enables a "Builder" LLM to analyze and improve agent behavior by understanding:
+Framework provides a runtime that captures **decisions**, not just actions. This enables continuous improvement of agent behavior by understanding:
 
 - What the agent was trying to accomplish
 - What options it considered
 - What it chose and why
 - What happened as a result
+
+Built with **Gemini 3** for advanced reasoning and **partner MCP servers** for specialized capabilities.
 
 ## Installation
 
@@ -43,9 +47,11 @@ uv run python -m framework info exports/calculator
 ### Using the Runtime
 
 ```python
-from framework import Runtime
+from framework import Runtime, GeminiProvider
 
-runtime = Runtime("/path/to/storage")
+# Initialize with Gemini
+provider = GeminiProvider()  # Uses GOOGLE_API_KEY env var
+runtime = Runtime("/path/to/storage", llm_provider=provider)
 
 # Start a run
 run_id = runtime.start_run("my_goal", "Description of what we're doing")
@@ -124,13 +130,14 @@ for s in suggestions:
 └────────┬────────┘
          │
 ┌────────▼────────┐
-│   Builder LLM   │  ← Analyzes runs, suggests improvements
-│  (BuilderQuery) │
+│ Orchestrator    │  ← Gemini 3: Analyzes runs, suggests improvements
+│  (Gemini 3)     │
 └────────┬────────┘
          │
 ┌────────▼────────┐
-│   Agent LLM     │  ← Executes tasks, records decisions
-│    (Runtime)    │
+│   Agent Swarm   │  ← Executes tasks, records decisions
+│  (Gemini 3 +    │
+│   MCP Tools)    │
 └─────────────────┘
 ```
 
@@ -139,10 +146,11 @@ for s in suggestions:
 - **Decision**: The atomic unit of agent behavior. Captures intent, options, choice, and reasoning.
 - **Run**: A complete execution with all decisions and outcomes.
 - **Runtime**: Interface agents use to record their behavior.
-- **BuilderQuery**: Interface Builder uses to analyze agent behavior.
+- **Orchestrator**: Gemini 3-powered reasoning engine that plans and coordinates.
 
 ## Requirements
 
 - Python 3.11+
 - pydantic >= 2.0
-- anthropic >= 0.40.0 (for LLM-powered agents)
+- litellm >= 1.81.0 (for multi-provider LLM support)
+- Google API key for Gemini (set GOOGLE_API_KEY env var)

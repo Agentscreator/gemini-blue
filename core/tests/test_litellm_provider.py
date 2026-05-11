@@ -32,9 +32,9 @@ class TestLiteLLMProviderInit:
 
     def test_init_with_defaults(self):
         """Test initialization with default parameters."""
-        with patch.dict(os.environ, {"OPENAI_API_KEY": "test-key"}):
+        with patch.dict(os.environ, {"GOOGLE_API_KEY": "test-key"}):
             provider = LiteLLMProvider()
-            assert provider.model == "gpt-4o-mini"
+            assert provider.model == "gemini/gemini-2.0-flash-exp"
             assert provider.api_key is None
             assert provider.api_base is None
 

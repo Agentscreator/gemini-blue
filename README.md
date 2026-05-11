@@ -3,24 +3,24 @@
 <br/>
 
 ```
-███╗   ███╗ █████╗ ██╗   ██╗███████╗███╗   ██╗
-████╗ ████║██╔══██╗██║   ██║██╔════╝████╗  ██║
-██╔████╔██║███████║██║   ██║█████╗  ██╔██╗ ██║
-██║╚██╔╝██║██╔══██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║
-██║ ╚═╝ ██║██║  ██║ ╚████╔╝ ███████╗██║ ╚████║
-╚═╝     ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝
+ ██████╗ ███████╗███╗   ███╗██╗███╗   ██╗██╗
+██╔════╝ ██╔════╝████╗ ████║██║████╗  ██║██║
+██║  ███╗█████╗  ██╔████╔██║██║██╔██╗ ██║██║
+██║   ██║██╔══╝  ██║╚██╔╝██║██║██║╚██╗██║██║
+╚██████╔╝███████╗██║ ╚═╝ ██║██║██║ ╚████║██║
+ ╚═════╝ ╚══════╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝
 ```
 
-### **Autonomous DevSecOps Swarm for GitLab**
+### **Intelligent Multi-Agent System Powered by Gemini**
 
-*Your GitLab project never sleeps. Neither does Maven.*
+*Building agents that reason, plan, and execute tasks for real-world challenges.*
 
 <br/>
 
-[![License](https://img.shields.io/badge/License-Apache_2.0-brown.svg?style=for-the-badge)](LICENSE)
-[![GitLab](https://img.shields.io/badge/GitLab-Duo_Agent_Platform-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)](https://gitlab.com)
-[![Claude](https://img.shields.io/badge/Powered_by-Claude_Queen-8B4513?style=for-the-badge)](https://anthropic.com)
-[![Hackathon](https://img.shields.io/badge/GitLab_AI_Hackathon-2026_Submission-6B2D2D?style=for-the-badge)](https://gitlab.com)
+[![License](https://img.shields.io/badge/License-Apache_2.0-4285F4.svg?style=for-the-badge)](LICENSE)
+[![Google Cloud](https://img.shields.io/badge/Google_Cloud-Agent_Builder-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com)
+[![Gemini](https://img.shields.io/badge/Powered_by-Gemini_3-DB4437?style=for-the-badge&logo=google&logoColor=white)](https://deepmind.google/technologies/gemini/)
+[![Hackathon](https://img.shields.io/badge/Google_Cloud-Rapid_Agent_Hackathon-0F9D58?style=for-the-badge)](https://google-cloud-rapid-agent.devpost.com/)
 
 <br/>
 
@@ -37,15 +37,15 @@
 
 <br/>
 
-## `>_ what is maven`
+## `>_ what is gemini agent framework`
 
-Maven is an **autonomous, self-healing multi-agent swarm** that lives inside your GitLab environment. It watches your software development lifecycle in real time — reacting to failing pipelines, new security vulnerabilities, stale merge requests, and unreviewed issues — and takes targeted action through the **GitLab Duo Agent Platform** without waiting for a human to notice.
+This is an **autonomous, self-healing multi-agent system** built with **Google Gemini 3** and **Google Cloud Agent Builder**. It demonstrates how AI agents can move beyond simple chatbots to accomplish complex, multi-step tasks across real-world workflows — from DevSecOps automation to data pipeline management.
 
-> Where traditional AI tools answer questions, **Maven answers situations.**
-> It is outcome-driven, not prompt-driven. You don't ask Maven to do something —
-> Maven recognizes that something needs to be done and does it.
+> Where traditional AI tools answer questions, **these agents take action.**
+> They are outcome-driven, not prompt-driven. You define the mission —
+> the agents reason about the steps, use the right tools, and get it done.
 
-**Claude (Anthropic) is the Queen** — the central reasoning and coordination agent that designs, directs, and evolves the entire worker swarm.
+**Gemini 3 is the orchestrator** — the central reasoning engine that plans, delegates, and coordinates the entire agent swarm using advanced reasoning capabilities and partner MCP servers for specialized tasks.
 
 <br/>
 
@@ -57,25 +57,25 @@ Maven is an **autonomous, self-healing multi-agent swarm** that lives inside you
 
 ```bash
 # 1. Clone
-git clone https://github.com/Agentscreator/maven-gitlab-agent.git
-cd maven-gitlab-agent
+git clone https://github.com/Agentscreator/gemini-agent-framework.git
+cd gemini-agent-framework
 
 # 2. Install
 ./quickstart.sh
 
-# 3. Connect GitLab + Anthropic
-maven config set gitlab.token   YOUR_GITLAB_TOKEN
-maven config set gitlab.url     https://gitlab.com
-maven config set anthropic.key  YOUR_ANTHROPIC_API_KEY
+# 3. Configure Google Cloud + Partner MCP Server
+export GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+export GITLAB_TOKEN=YOUR_GITLAB_TOKEN  # For GitLab track
+# OR configure other partner credentials (Elastic, MongoDB, Fivetran, Arize)
 
-# 4. Register webhook
-maven gitlab register --project your-namespace/your-project
+# 4. Run an agent
+uv run python -m framework run exports/your_agent --input '{"goal": "your mission"}'
 
-# 5. Launch
-maven open
+# 5. Launch monitoring dashboard
+uv run python -m framework server
 ```
 
-> Once registered, Maven begins listening. Workers activate on the first matching event.
+> Agents use Gemini 3 for reasoning and partner MCP servers for specialized capabilities.
 
 <br/>
 
@@ -152,26 +152,31 @@ For production, set `GITLAB_WEBHOOK_SECRET` to validate that payloads come from 
 
 <br/>
 
-## `>_ the problem`
+## `>_ the challenge`
 
-Development teams face what we call the **AI Paradox**: AI writes code faster than ever, but the surrounding process — security reviews, test coverage, CI/CD failures, issue triage, compliance checks — hasn't kept pace. The bottleneck has shifted from writing code to everything around it.
+**Google Cloud Rapid Agent Hackathon: Building Agents for Real-World Challenges**
+
+This project demonstrates how to build functional agents that solve real-world problems using:
+- **Gemini 3** for advanced reasoning and planning
+- **Google Cloud Agent Builder** for rapid prototyping and orchestration
+- **Partner MCP Servers** (GitLab, Elastic, MongoDB, Fivetran, Arize) for specialized capabilities
 
 <br/>
 
 <div align="center">
 
-| What happens | The cost |
+| Challenge | Agent Solution |
 |:---|:---|
-| 🔴 SAST scan fires 12 vulnerabilities | Sit unreviewed for **4 days** |
-| 🔴 Pipeline breaks at 2am | No one sees it until standup — **8 hours lost** |
-| 🔴 60 issues opened in a sprint | 40 are **unlabeled, unassigned, no criteria** |
-| 🔴 MR violates compliance policy | Gets merged anyway — **no one checked** |
+| 🎯 **Multi-Step Missions** | Agents plan steps, use tools, and complete complex workflows |
+| 🔧 **Partner Integration** | MCP servers provide "superpowers" (GitLab CI/CD, Elastic search, MongoDB data) |
+| 🧠 **Advanced Reasoning** | Gemini 3 handles context, makes decisions, adapts to failures |
+| 👁️ **Human-in-the-Loop** | Agents escalate when confidence is low, keeping you in control |
 
 </div>
 
 <br/>
 
-> AI chatbots don't solve this. They wait to be asked. **Maven doesn't wait.**
+> This isn't a chatbot. It's an agent that **gets things done**.
 
 <br/>
 
@@ -184,48 +189,47 @@ Development teams face what we call the **AI Paradox**: AI writes code faster th
 ### The Core Loop
 
 ```
-  GitLab Event Fires
+  User Mission / Event Trigger
         │
         ▼
   ┌─────────────────────────────────────────┐
-  │        Queen Agent  (Claude)            │
-  │  · Interprets event → defines goal      │
-  │  · Generates worker graph               │
-  │  · Evaluates outcome                    │
-  │  · On failure: evolves graph, redeploys │
+  │    Orchestrator Agent (Gemini 3)        │
+  │  · Interprets goal → plans steps        │
+  │  · Generates agent graph                │
+  │  · Evaluates outcomes                   │
+  │  · On failure: adapts plan, retries     │
   └──────────────────┬──────────────────────┘
                      │
         ┌────────────▼────────────┐
-        │     Worker Swarm        │
+        │     Agent Swarm         │
         │  (parallel execution)   │
         └────────────┬────────────┘
                      │
         ┌────────────▼────────────┐
-        │  GitLab Duo Agent       │
-        │  Platform (executor)    │
+        │  Partner MCP Servers    │
+        │  (GitLab, Elastic, etc) │
         └────────────┬────────────┘
                      │
           ┌──────────┴──────────┐
           ▼                     ▼
       ✅ Success            ⚠️  Low confidence
-   Close loop              Human-in-the-Loop
-   Log & update            Escalation Node
+   Complete mission        Human-in-the-Loop
+   Log & report            Escalation Node
 ```
 
 <br/>
 
-### Event → Action Map
+### Partner Track Examples
 
 <div align="center">
 
-| 🔔 GitLab Event | ⚡ Maven Response |
+| 🎯 Partner Track | 🤖 Agent Capabilities |
 |:---|:---|
-| Security scan finds vulnerability | Analyze · patch · open MR · notify |
-| Pipeline fails | Diagnose root cause · fix · retry or escalate |
-| Issue opened | Triage · label · assign · draft acceptance criteria |
-| MR opened | Review compliance · test coverage · code quality |
-| Coverage drops below threshold | Find uncovered code · generate tests · commit |
-| MR idle > N days | Summarize · ping assignee · or close with explanation |
+| **GitLab** | CI/CD automation · Security patching · Issue triage · MR reviews |
+| **Elastic** | Log analysis · Search optimization · Anomaly detection · Index management |
+| **MongoDB** | Data pipeline automation · Schema validation · Query optimization |
+| **Fivetran** | Data sync monitoring · Connector health checks · Pipeline orchestration |
+| **Arize** | Model monitoring · Performance analysis · Drift detection · Observability |
 
 </div>
 
@@ -235,7 +239,7 @@ Development teams face what we call the **AI Paradox**: AI writes code faster th
 
 <br/>
 
-## `>_ worker castes`
+## `>_ agent architecture`
 
 <br/>
 
@@ -243,25 +247,22 @@ Development teams face what we call the **AI Paradox**: AI writes code faster th
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
-│                        MAVEN SWARM                               │
+│                    GEMINI AGENT FRAMEWORK                        │
 │                                                                  │
-│   👑  QUEEN  (Claude)                                            │
-│       Reasons · Plans · Delegates · Evolves                      │
+│   🧠  ORCHESTRATOR  (Gemini 3)                                   │
+│       Advanced Reasoning · Planning · Coordination               │
 │                                                                  │
-│   ├── 🛡️  Security Worker                                        │
-│   │       SAST/DAST → patch → MR → link to finding              │
+│   ├── 🔧  Specialized Agents                                     │
+│   │       Task-specific agents with domain expertise            │
 │   │                                                              │
-│   ├── 🧪  Test Worker                                            │
-│   │       Coverage gaps → generate tests → confirm green         │
+│   ├── 🔌  Partner MCP Servers                                    │
+│   │       GitLab · Elastic · MongoDB · Fivetran · Arize         │
 │   │                                                              │
-│   ├── 🏷️  Triage Worker                                          │
-│   │       Issues → label → assign → acceptance criteria          │
+│   ├── 🎯  Goal-Driven Execution                                  │
+│   │       Multi-step planning → tool use → outcome validation   │
 │   │                                                              │
-│   ├── 🚀  Deploy Worker                                          │
-│   │       Pipeline logs → root cause → fix → retry               │
-│   │                                                              │
-│   └── ✅  Compliance Worker                                      │
-│           MR diff → policy check → report → block if critical    │
+│   └── 👁️  Human-in-the-Loop                                      │
+│           Escalation on low confidence · Approval workflows      │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -273,32 +274,36 @@ Development teams face what we call the **AI Paradox**: AI writes code faster th
 
 <br/>
 
-## `>_ architecture`
+## `>_ technical architecture`
 
 ```
-Maven Control Plane
-├── GitLab Webhooks ──→ Event Router  (classify & queue)
+Gemini Agent Framework
+├── Event Triggers ──→ Mission Router  (classify & dispatch)
 │
-├── 👑 Queen Agent (Claude)
-│   ├── Goal interpretation
-│   ├── Dynamic graph generation
-│   ├── Outcome evaluation
-│   └── Self-healing / graph evolution
+├── 🧠 Orchestrator Agent (Gemini 3)
+│   ├── Goal interpretation & planning
+│   ├── Dynamic agent graph generation
+│   ├── Outcome evaluation & validation
+│   └── Self-healing / adaptive replanning
 │
-├── 🐝 Worker Swarm
-│   ├── Security Worker
-│   ├── Test Worker
-│   ├── Triage Worker
-│   ├── Deploy Worker
-│   └── Compliance Worker
+├── 🤖 Specialized Agent Swarm
+│   ├── Domain-specific agents (security, data, ops)
+│   ├── Parallel execution with coordination
+│   └── Tool orchestration via MCP
 │
-├── GitLab Duo Agent Platform  (action executor)
-├── Human-in-the-Loop Escalation Node
+├── 🔌 Partner MCP Servers
+│   ├── GitLab (CI/CD, issues, MRs)
+│   ├── Elastic (search, logs, analytics)
+│   ├── MongoDB (data operations)
+│   ├── Fivetran (data pipelines)
+│   └── Arize (ML observability)
+│
+├── 👁️ Human-in-the-Loop Escalation
 │
 └── 📊 Real-time Observability Dashboard
     ├── WebSocket streaming
-    ├── Cost tracking per agent / event type
-    └── Execution logs
+    ├── Cost tracking per agent / mission
+    └── Execution logs & decision traces
 ```
 
 <br/>
@@ -309,15 +314,15 @@ Maven Control Plane
 
 | Layer | Technology |
 |:---|:---|
-| Queen reasoning | Claude 3.5 Sonnet / Claude 3 Opus — Anthropic API |
-| Worker execution | GitLab Duo Agent Platform |
+| Reasoning Engine | **Gemini 3** (gemini-2.0-flash-exp, gemini-1.5-pro) |
+| Agent Builder | **Google Cloud Agent Builder** |
 | Runtime | Python 3.11+ |
-| LLM routing | LiteLLM (model-agnostic) |
-| Tool protocol | MCP — Model Context Protocol |
-| Event ingestion | GitLab Webhooks → Event Router |
+| LLM Abstraction | LiteLLM (multi-provider support) |
+| Tool Protocol | **MCP** — Model Context Protocol |
+| Partner Integration | GitLab, Elastic, MongoDB, Fivetran, Arize MCP servers |
 | Observability | WebSocket streaming dashboard |
-| Credentials | Encrypted store at `~/.maven/credentials` |
-| Green routing | Haiku / Gemini Flash for low-complexity tasks |
+| Credentials | Encrypted store at `~/.hive/credentials` |
+| Cost Optimization | Gemini Flash for simple tasks, Pro for complex reasoning |
 
 </div>
 
@@ -331,23 +336,26 @@ Maven Control Plane
 
 <br/>
 
-**`⚙️ Self-Healing Swarm`**
-When a worker fails, Maven doesn't stop. The Queen captures the full failure context, reasons about what went wrong, rewrites the relevant worker's instructions or graph connections, and redeploys — automatically, within configurable retry limits.
+**`🧠 Gemini 3 Advanced Reasoning`**
+Leverages Gemini's extended context windows (up to 2M tokens) and multimodal capabilities for complex planning, decision-making, and tool orchestration across multi-step missions.
 
-**`🔀 Dynamic Graph Generation`**
-No hardcoded workflows. The Queen generates a fresh agent graph for every event based on context. A vulnerability in a Go service gets a different worker configuration than one in a Python script.
+**`🔀 Dynamic Agent Graphs`**
+No hardcoded workflows. The orchestrator generates a fresh agent graph for every mission based on context. Different problems get different agent configurations and tool chains.
 
 **`👁 Human-in-the-Loop Escalation`**
-Every workflow has a configurable confidence threshold. Below it, execution pauses and a structured summary is posted as a GitLab comment, routing the decision to a human. Timeouts and fallback policies ensure nothing gets stuck.
+Every workflow has a configurable confidence threshold. Below it, execution pauses and a structured summary is presented to the user for approval. Timeouts and fallback policies ensure nothing gets stuck.
 
-**`🌿 Green Agent Routing`**
-Tasks are routed by complexity. Triage uses lightweight, low-cost models. Security patching uses Claude. A live cost dashboard shows spend per event type, per agent, per repo. Daily budget caps prevent runaway costs.
+**`🔌 Partner MCP Integration`**
+Seamless integration with partner MCP servers (GitLab, Elastic, MongoDB, Fivetran, Arize) gives agents specialized capabilities without custom API code.
 
-**`🧩 SDK-Wrapped Nodes`**
-Every worker has shared swarm memory, local rolling memory, full tool access (GitLab API, filesystem, browser), and LLM access — all out of the box.
+**`💰 Cost-Optimized Routing`**
+Tasks are routed by complexity. Simple operations use Gemini Flash (fast, cheap). Complex reasoning uses Gemini Pro. Live cost dashboard tracks spend per agent and mission.
 
-**`∅ Zero-Hardcode Philosophy`**
-Connection code between nodes is generated by the Queen. You configure policies. Maven figures out the rest.
+**`🔄 Self-Healing Execution`**
+When an agent fails, the orchestrator captures the failure context, reasons about what went wrong, adapts the plan, and retries — automatically, within configurable limits.
+
+**`📊 Real-Time Observability`**
+WebSocket-based dashboard shows agent execution in real-time: active missions, tool calls, token usage, costs, and decision traces.
 
 <br/>
 
@@ -358,42 +366,52 @@ Connection code between nodes is generated by the Queen. You configure policies.
 ## `>_ configuration`
 
 ```yaml
-# .maven/policy.yaml
+# .hive/policy.yaml
 
-queen:
-  model: claude-3-5-sonnet-20241022
+orchestrator:
+  model: gemini-2.0-flash-exp  # or gemini-1.5-pro for complex reasoning
   max_retries: 3
   confidence_threshold: 0.75
+  max_context_tokens: 1000000  # Gemini's extended context
 
-workers:
+agents:
   security:
     enabled: true
     auto_commit: true
     require_human_approval_for: ["critical", "high"]
-  test:
+  data_pipeline:
     enabled: true
-    min_coverage_delta: 5
-  triage:
+    partner_mcp: fivetran  # or mongodb, elastic
+  observability:
     enabled: true
-    assign_from: codeowners
-  deploy:
+    partner_mcp: arize
+  devops:
     enabled: true
-    auto_retry_limit: 2
-  compliance:
-    enabled: true
-    policy_file: .maven/compliance-rules.yaml
-    block_on: ["secrets_detected", "required_reviewer_missing"]
+    partner_mcp: gitlab
 
-green_routing:
+cost_optimization:
   enabled: true
-  simple_tasks_model: claude-haiku-3
-  complex_tasks_model: claude-3-5-sonnet-20241022
+  simple_tasks_model: gemini-2.0-flash-exp  # Fast, cheap
+  complex_tasks_model: gemini-1.5-pro       # Advanced reasoning
   cost_cap_daily_usd: 20.00
 
 human_in_the_loop:
-  notification_channel: gitlab_comment
+  notification_channel: console  # or slack, email
   escalation_timeout_minutes: 60
-  escalation_fallback: assign_to_maintainer
+  escalation_fallback: log_and_continue
+
+partner_mcp_servers:
+  gitlab:
+    enabled: true
+    token_env: GITLAB_TOKEN
+  elastic:
+    enabled: false
+  mongodb:
+    enabled: false
+  fivetran:
+    enabled: false
+  arize:
+    enabled: false
 ```
 
 <br/>
@@ -402,30 +420,38 @@ human_in_the_loop:
 
 <br/>
 
-## `>_ roadmap`
+## `>_ hackathon submission`
 
-<div align="center">
+**Google Cloud Rapid Agent Hackathon 2026**
 
-```
-v1.0  ████████████████████  NOW
-      Five worker castes · Queen on Claude · GitLab Duo
-      Self-healing · Green routing · HITL · Dashboard
+This project demonstrates:
 
-v1.1  ████████████░░░░░░░░  NEXT
-      Custom workers via natural language
-      "Create a worker that enforces our API naming conventions"
+✅ **Gemini 3 Integration** — Advanced reasoning and planning with extended context  
+✅ **Google Cloud Agent Builder** — Rapid prototyping and orchestration  
+✅ **Partner MCP Integration** — GitLab track (primary), extensible to other partners  
+✅ **Multi-Step Missions** — Complex workflows with tool orchestration  
+✅ **Human-in-the-Loop** — Confidence-based escalation for oversight  
+✅ **Real-World Use Cases** — DevSecOps automation, data pipelines, observability  
 
-v1.2  ████████░░░░░░░░░░░░  SOON
-      Cross-project swarms across an entire GitLab group
+### Partner Track: GitLab
 
-v1.3  ██████░░░░░░░░░░░░░░  LATER
-      Per-repo memory — learns from past failures over time
+Primary integration with GitLab MCP server for:
+- CI/CD pipeline automation and failure recovery
+- Security vulnerability detection and patching
+- Issue triage and assignment
+- Merge request reviews and compliance checks
 
-v2.0  ████░░░░░░░░░░░░░░░░  FUTURE
-      Maven Marketplace — community worker caste templates
-```
+### Demo Video
 
-</div>
+[Link to 3-minute demo video]
+
+### Open Source Repository
+
+[https://github.com/Agentscreator/gemini-agent-framework](https://github.com/Agentscreator/gemini-agent-framework)
+
+### Live Demo
+
+[Link to hosted project if applicable]
 
 <br/>
 
@@ -435,18 +461,18 @@ v2.0  ████░░░░░░░░░░░░░░░░  FUTURE
 
 <div align="center">
 
-**Maven** uses the [GitLab Duo Agent Platform](https://gitlab.com) for execution
-and [Claude (Anthropic)](https://anthropic.com) as the Queen reasoning agent.
+**Gemini Agent Framework** uses [Google Gemini 3](https://deepmind.google/technologies/gemini/) for advanced reasoning,
+[Google Cloud Agent Builder](https://cloud.google.com) for orchestration,
+and partner MCP servers for specialized capabilities.
 
 <br/>
 
 ```
-Because your codebase deserves a teammate that never clocks out.
+Building agents that don't just answer questions — they accomplish missions.
 ```
 
 <br/>
 
-*GitLab AI Hackathon — 2026 Submission*
+*Google Cloud Rapid Agent Hackathon — 2026 Submission*
 
 </div>
-# gemini-blue
